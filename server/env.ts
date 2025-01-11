@@ -20,8 +20,15 @@ export function setupEnvironment() {
     );
   }
 
+  if (!process.env.MODEL_NAME) {
+    throw new Error(
+      "MODEL_NAME environment variable must be set in .env file"
+    );
+  }
+
   return {
     GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
     NODE_ENV: process.env.NODE_ENV || "development",
+    MODEL_NAME: process.env.MODEL_NAME || "gemini-2.0-flash-exp",
   };
 }
