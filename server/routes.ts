@@ -11,7 +11,7 @@ import { setupEnvironment } from "./env";
 const env = setupEnvironment();
 const genAI = new GoogleGenerativeAI(env.GOOGLE_API_KEY);
 const model = genAI.getGenerativeModel({
-  model: env.MODEL_NAME,  // "gemini-2.0-flash-exp",
+  model: env.MODEL_NAME,
   generationConfig: {
     temperature: 0.9,
     topP: 1,
