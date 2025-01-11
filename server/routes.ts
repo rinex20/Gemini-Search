@@ -7,10 +7,6 @@ import {
 } from "@google/generative-ai";
 import { marked } from "marked";
 import { setupEnvironment } from "./env";
-import fetch from 'node-fetch';
-
-// Set global fetch
-globalThis.fetch = fetch;
 
 const env = setupEnvironment();
 const genAI = new GoogleGenerativeAI(env.GOOGLE_API_KEY);
